@@ -1,0 +1,6 @@
+framework module Pods_NorthEnvironmeniOS {
+  umbrella header "Pods-NorthEnvironmeniOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
