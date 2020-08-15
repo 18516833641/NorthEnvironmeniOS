@@ -27,6 +27,42 @@
 
 - (IBAction)loginAction:(id)sender {
     
+    _userNameText.text = @"inter";
+    _userNameText.text = @"123456";
+
+    NSDictionary * dict=@{
+//                          @"username":@"inter",
+//                          @"password": @"123456",
+                          };
+    [SVProgressHUD show];
+
+    NSString *urlString = [NSString stringWithFormat:@"%@",Url_SeverLogin];
+    NSLog(@"---%@",urlString);
+
+         //请求数据
+       [PostService AFHTTPSessionManager:urlString method:@"POST" params:dict WithBlock:^(id  _Nonnull responseObject, NSError * _Nonnull error) {
+
+           [SVProgressHUD dismiss];
+           if (error) {
+               [SVProgressHUD showErrorWithStatus:@"网络请求失败，请重新尝试"];
+           }else{
+
+//               NSLog(@"----===%@",responseObject);
+               NSLog(@"---%@",[PostService DataTOjsonString:responseObject]);
+//                NSLog(@"----===%@",jsonData);
+            NSUserDefaults *userDefaultsUid = [NSUserDefaults standardUserDefaults];
+
+            [userDefaultsUid setObject:responseObject[@"attributes"][@"id"] forKey:@"user_id"];
+            [userDefaultsUid setObject:responseObject[@"attributes"][@"token"] forKey:@"token"];
+
+            __unsafe_unretained __typeof(self) weakSelf = self;
+            RootTabBarViewController *tab = [[RootTabBarViewController alloc]init];
+            weakSelf.view.window.rootViewController = tab;
+            [userDefaultsUid setObject:@"1" forKey:@"ISFrist"];//记录是否第一次登录
+
+           }
+
+       }];
 }
 
 /*

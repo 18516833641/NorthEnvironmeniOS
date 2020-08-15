@@ -22,18 +22,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.tabBar.barTintColor = [UIColor whiteColor];
+    self.tabBar.barTintColor = Color_Base(26, 35, 49);
     [self creatTabBarItem];
 }
 
 
 -(void)creatTabBarItem
 {
-    RootNavigationController *homePage = [self tabBarWithController:[[homePageViewController alloc]init] andTitle:@"首页" andNormalImage:@"home" andSelectImage:@"homeIsselecd"];
+    RootNavigationController *homePage = [self tabBarWithController:[[homePageViewController alloc]init] andTitle:@"首页" andNormalImage:@"tabbarBackiamge" andSelectImage:@"tabbarBackiamge"];
 
-    RootNavigationController *persona = [self tabBarWithController:[[personalViewController alloc]init] andTitle:@"个人中心" andNormalImage:@"personIsSelecd" andSelectImage:@"persion"];
+    RootNavigationController *persona = [self tabBarWithController:[[personalViewController alloc]init] andTitle:@"个人中心" andNormalImage:@"tabbarBackiamge" andSelectImage:@"tabbarBackiamge"];
     
-     RootNavigationController *setup = [self tabBarWithController:[[setUpViewController alloc]init] andTitle:@"设置" andNormalImage:@"personIsSelecd" andSelectImage:@"persion"];
+     RootNavigationController *setup = [self tabBarWithController:[[setUpViewController alloc]init] andTitle:@"设置" andNormalImage:@"tabbarBackiamge" andSelectImage:@"tabbarBackiamge"];
     
     self.viewControllers = @[homePage,persona,setup];
 }
@@ -43,12 +43,13 @@
     RootNavigationController *nc = [[RootNavigationController alloc]initWithRootViewController:controller];
 
     UIImage *normal = [[UIImage imageNamed:normalImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-
+// normalimageViewsetContentMode:UIViewContentModeScaleAspectFill];
+//    [normal imageWithRenderingMode:UIViewContentModeCenter];
     UIImage *select = [[UIImage imageNamed:selectImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 
     controller.tabBarItem = [[UITabBarItem alloc]initWithTitle:title image:normal selectedImage:select];
 
-    self.tabBar.tintColor = Color_Base(45, 116, 214);
+    self.tabBar.tintColor = Color_Base(26, 35, 49);
     return nc;
 }
 /*

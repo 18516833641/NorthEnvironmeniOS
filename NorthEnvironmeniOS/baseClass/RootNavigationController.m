@@ -19,7 +19,7 @@
     UINavigationBar * nacBar = [UINavigationBar appearance];
     nacBar.tintColor = [UIColor whiteColor];  // 设置返回等按钮的颜色
     nacBar.translucent = NO;  //设置模糊效果
-    nacBar.barTintColor = Color_Base(45, 116, 214);
+    nacBar.barTintColor = Color_Base(26, 35, 49);
     
     
     

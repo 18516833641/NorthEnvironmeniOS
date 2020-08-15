@@ -46,7 +46,9 @@
         [self.window makeKeyAndVisible];
         
     }else{
-    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+
+    [tabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbarBackiamge"]];
         self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
         self.window.backgroundColor = [UIColor whiteColor];
         loginViewController *Root=[[loginViewController alloc]init];
