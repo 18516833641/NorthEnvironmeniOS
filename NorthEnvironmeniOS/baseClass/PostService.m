@@ -59,6 +59,22 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
         
     }else if([method isEqualToString:@"GET"]){//GET
         
+//        [manager.requestSerializer setValue:@"application/json"forHTTPHeaderField:@"X-AUTH-TOKEN"];
+        
+        
+        NSUserDefaults *des = [NSUserDefaults standardUserDefaults];
+             
+        NSString * token=[des objectForKey:@"token"];
+
+        [manager.requestSerializer setValue:@"application/json"forHTTPHeaderField:@"Accept"];
+
+        [manager.requestSerializer setValue:@"application/json;charset=utf-8"forHTTPHeaderField:@"Content-Type"];
+
+        [manager.requestSerializer setValue:@"X-AUTH-TOKEN" forHTTPHeaderField:[NSString stringWithFormat:@"%@",token]];
+        
+         [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",token] forHTTPHeaderField:@"X-AUTH-TOKEN"];
+
+
         [manager GET:url parameters:params headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSDictionary * JSON = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
 
@@ -306,5 +322,65 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     }
     return jsonString;
 }
+
+
++ (void)getHttpRequestURL:(NSString *)url RequestSuccess:(void(^)(id repoes,NSURLSessionDataTask *task)) success RequestFaile:(void(^)(NSError *error))faile{
+
+   AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+
+   manager.responseSerializer = [AFHTTPResponseSerializer serializer];//放弃解析
+
+    ///自定义http header 此处可省略
+    
+    NSUserDefaults *des = [NSUserDefaults standardUserDefaults];
+         
+    NSString * token=[des objectForKey:@"token"];
+
+    [manager.requestSerializer setValue:@"application/json"forHTTPHeaderField:@"Accept"];
+
+    [manager.requestSerializer setValue:@"application/json;charset=utf-8"forHTTPHeaderField:@"Content-Type"];
+
+    [manager.requestSerializer setValue:@"X-AUTH-TOKEN" forHTTPHeaderField:[NSString stringWithFormat:@"%@",token]];
+    
+     [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",token] forHTTPHeaderField:@"X-AUTH-TOKEN"];
+
+    [manager.requestSerializer setHTTPShouldHandleCookies:NO];
+    
+    [manager GET:url parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (success) {
+
+            //返回成功结果
+
+            success(responseObject,task);
+
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+         //返回失败结果
+
+               faile(error);
+    }];
+
+//    [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+//
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//
+//        if (success) {
+//
+//            //返回成功结果
+//
+//            success(responseObject,task);
+//
+//        }
+//
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//
+//        //返回失败结果
+//
+//        faile(error);
+//
+//    }];
+
+}
+
 
 @end

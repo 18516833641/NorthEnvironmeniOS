@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    self.view.backgroundColor = Color_Base(26, 35, 49);
 }
 
 - (void)hideTabBar {

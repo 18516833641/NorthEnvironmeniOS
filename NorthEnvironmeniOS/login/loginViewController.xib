@@ -63,9 +63,9 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcD-tr-7x8">
-                    <rect key="frame" x="30" y="699" width="354" height="40"/>
+                    <rect key="frame" x="30" y="689" width="354" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="FnQ-i9-DUC"/>
+                        <constraint firstAttribute="height" constant="50" id="FnQ-i9-DUC"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="登录" backgroundImage="11_05">

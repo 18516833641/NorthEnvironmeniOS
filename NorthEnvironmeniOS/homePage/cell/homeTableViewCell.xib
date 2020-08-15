@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="homeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="312" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.png" translatesAutoresizingMaskIntoConstraints="NO" id="xT9-Km-nUm">
+                        <rect key="frame" x="20" y="20" width="20" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="52X-cj-PK3"/>
+                            <constraint firstAttribute="height" constant="20" id="iGM-XW-urG"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H52-dM-JR9">
+                        <rect key="frame" x="60" y="19.5" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="nDT-6a-dUP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginLine" translatesAutoresizingMaskIntoConstraints="NO" id="KKD-f3-ny8">
+                        <rect key="frame" x="0.0" y="66" width="312" height="2"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="CVP-Sa-KW5"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="K2R-ao-bNT">
+                        <rect key="frame" x="277" y="22.5" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="UHn-Mw-KY1"/>
+                            <constraint firstAttribute="height" constant="15" id="XK2-9X-QGz"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="K2R-ao-bNT" secondAttribute="trailing" constant="20" id="0un-px-GPo"/>
+                    <constraint firstItem="xT9-Km-nUm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="Gn6-0C-y4o"/>
+                    <constraint firstItem="H52-dM-JR9" firstAttribute="leading" secondItem="xT9-Km-nUm" secondAttribute="leading" constant="40" id="Vwb-uD-NYG"/>
+                    <constraint firstItem="H52-dM-JR9" firstAttribute="centerY" secondItem="xT9-Km-nUm" secondAttribute="centerY" id="aWT-0O-92H"/>
+                    <constraint firstItem="xT9-Km-nUm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="fS5-L0-NuP"/>
+                    <constraint firstItem="K2R-ao-bNT" firstAttribute="centerY" secondItem="xT9-Km-nUm" secondAttribute="centerY" id="mq9-qw-x4x"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="KKD-f3-ny8" firstAttribute="leading" secondItem="aW0-zy-SZf" secondAttribute="leading" id="1xb-Ed-qY1"/>
+                <constraint firstItem="KKD-f3-ny8" firstAttribute="width" secondItem="aW0-zy-SZf" secondAttribute="width" id="OQg-iK-DMk"/>
+                <constraint firstItem="aW0-zy-SZf" firstAttribute="bottom" secondItem="KKD-f3-ny8" secondAttribute="bottom" constant="2" id="e3p-K7-iRS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="headerImage" destination="xT9-Km-nUm" id="sAC-eM-Aar"/>
+                <outlet property="titleLabel" destination="H52-dM-JR9" id="vmp-Fp-nSD"/>
+            </connections>
+            <point key="canvasLocation" x="-23.188405797101453" y="2.0089285714285712"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="back" width="12.5" height="16.5"/>
+        <image name="info.png" width="28" height="28"/>
+        <image name="loginLine" width="375" height="2"/>
+    </resources>
+</document>

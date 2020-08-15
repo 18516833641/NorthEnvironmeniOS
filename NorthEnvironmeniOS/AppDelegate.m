@@ -34,9 +34,11 @@
     
     NSString * frist=[des objectForKey:@"ISFrist"];
     
+    NSString * token=[des objectForKey:@"token"];
+    
     NSLog(@"--=--=-%@",frist);
     
-    if ([frist intValue]==1) {
+    if ([frist isEqualToString:token]) {
         
         self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
         self.window.backgroundColor = [UIColor whiteColor];
@@ -46,9 +48,9 @@
         [self.window makeKeyAndVisible];
         
     }else{
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-
-    [tabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbarBackiamge"]];
+//    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+//
+//    [tabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbarBackiamge"]];
         self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
         self.window.backgroundColor = [UIColor whiteColor];
         loginViewController *Root=[[loginViewController alloc]init];

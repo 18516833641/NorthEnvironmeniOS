@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,22 +18,123 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_03" translatesAutoresizingMaskIntoConstraints="NO" id="Kf7-41-d2n">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeBacking_02" translatesAutoresizingMaskIntoConstraints="NO" id="Kf7-41-d2n">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <gestureRecognizers/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phj-Ka-JHO">
+                    <rect key="frame" x="40" y="194" width="334" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="AKZ-J3-05j"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="K0m-31-8zw" appends="YES" id="EhP-KY-bVE"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gza-bg-rcq">
+                    <rect key="frame" x="31" y="343" width="352" height="200"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="WAE-9p-a1f">
+                            <rect key="frame" x="10" y="21" width="342" height="28"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdm-Ci-xbJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="90" height="28"/>
+                                    <state key="normal" title="  公司简介" backgroundImage="home_butBack">
+                                        <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="oneButAction:" destination="-1" eventType="touchUpInside" id="hGY-Fm-QKV"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpE-l3-785">
+                                    <rect key="frame" x="126" y="0.0" width="90" height="28"/>
+                                    <state key="normal" title="  资质荣誉" backgroundImage="home_butBack">
+                                        <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="twoButAction:" destination="-1" eventType="touchUpInside" id="sZS-oP-tLq"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoS-ea-Uoj">
+                                    <rect key="frame" x="252" y="0.0" width="90" height="28"/>
+                                    <state key="normal" title="  主营业务" backgroundImage="home_butBack">
+                                        <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="threeButAction:" destination="-1" eventType="touchUpInside" id="MCe-Lf-i84"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="zYI-X7-rbu">
+                            <rect key="frame" x="10" y="86" width="342" height="28"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6a-Sp-XCy">
+                                    <rect key="frame" x="0.0" y="0.0" width="90" height="28"/>
+                                    <state key="normal" title="  主导技术" backgroundImage="home_butBack">
+                                        <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="fourButAction:" destination="-1" eventType="touchUpInside" id="JmY-ma-IgR"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U30-md-lCh">
+                                    <rect key="frame" x="126" y="0.0" width="90" height="28"/>
+                                    <state key="normal" title="  行业应用" backgroundImage="home_butBack">
+                                        <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="fiveButAction:" destination="-1" eventType="touchUpInside" id="7HP-3G-B0K"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emE-wx-Djr">
+                                    <rect key="frame" x="252" y="0.0" width="90" height="28"/>
+                                    <state key="normal" title="  工程案例" backgroundImage="home_butBack">
+                                        <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="sixButAction:" destination="-1" eventType="touchUpInside" id="f1u-4R-zcS"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="WAE-9p-a1f" firstAttribute="top" secondItem="gza-bg-rcq" secondAttribute="top" constant="21" id="O40-lH-swA"/>
+                        <constraint firstItem="WAE-9p-a1f" firstAttribute="leading" secondItem="gza-bg-rcq" secondAttribute="leading" constant="10" id="bQC-DL-nPt"/>
+                        <constraint firstAttribute="height" constant="200" id="loA-q8-yBW"/>
+                        <constraint firstItem="zYI-X7-rbu" firstAttribute="leading" secondItem="WAE-9p-a1f" secondAttribute="leading" id="o13-ei-93F"/>
+                        <constraint firstItem="zYI-X7-rbu" firstAttribute="top" secondItem="WAE-9p-a1f" secondAttribute="bottom" constant="37" id="vzm-df-Van"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="Kf7-41-d2n" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="9v7-WU-8Zw"/>
+                <constraint firstItem="Phj-Ka-JHO" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="150" id="EZw-mU-sE5"/>
+                <constraint firstItem="Phj-Ka-JHO" firstAttribute="width" secondItem="Q5M-cg-NOt" secondAttribute="width" constant="-80" id="ORD-HQ-ucp"/>
                 <constraint firstItem="Kf7-41-d2n" firstAttribute="height" secondItem="Q5M-cg-NOt" secondAttribute="height" id="XPB-wN-Xgr"/>
+                <constraint firstItem="gza-bg-rcq" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="fuF-vR-5Ri"/>
                 <constraint firstItem="Kf7-41-d2n" firstAttribute="width" secondItem="Q5M-cg-NOt" secondAttribute="width" id="qgo-Vs-v7l"/>
+                <constraint firstItem="Phj-Ka-JHO" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="40" id="sKU-Kd-BOC"/>
                 <constraint firstItem="Kf7-41-d2n" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="vqS-BF-j8o"/>
+                <constraint firstItem="gza-bg-rcq" firstAttribute="width" secondItem="Q5M-cg-NOt" secondAttribute="width" multiplier="0.85" id="wSP-24-18r"/>
+                <constraint firstItem="gza-bg-rcq" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" constant="-10" id="xw9-Cv-Poo"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="137.68115942028987" y="122.54464285714285"/>
         </view>
+        <tapGestureRecognizer id="K0m-31-8zw">
+            <connections>
+                <action selector="zeroAction:" destination="-1" id="smu-ma-L1C"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="home_03" width="373" height="599"/>
+        <image name="homeBacking_02" width="375" height="597.5"/>
+        <image name="home_butBack" width="90" height="28"/>
     </resources>
 </document>

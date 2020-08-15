@@ -58,7 +58,7 @@
             __unsafe_unretained __typeof(self) weakSelf = self;
             RootTabBarViewController *tab = [[RootTabBarViewController alloc]init];
             weakSelf.view.window.rootViewController = tab;
-            [userDefaultsUid setObject:@"1" forKey:@"ISFrist"];//记录是否第一次登录
+            [userDefaultsUid setObject:responseObject[@"attributes"][@"token"] forKey:@"ISFrist"];//记录是否第一次登录
 
            }
 

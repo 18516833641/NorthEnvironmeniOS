@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)AFHTTPSessionManager:(NSString *)url method:(NSString *) method params:(NSDictionary *)params WithBlock:(void(^)(id responseObject, NSError *error))completion;
 
++ (void)getHttpRequestURL:(NSString *)url RequestSuccess:(void(^)(id repoes,NSURLSessionDataTask *task)) success RequestFaile:(void(^)(NSError *error))faile;
+
 /******************************************************************************
 函数名称 : + (NSData *)dataWithBase64EncodedString:(NSString *)string
 函数描述 : base64格式字符串转换为文本数据
