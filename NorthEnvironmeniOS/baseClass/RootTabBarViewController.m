@@ -33,7 +33,7 @@
 
     RootNavigationController *persona = [self tabBarWithController:[[personalViewController alloc]init] andTitle:@"个人中心" andNormalImage:@"personIsSelecd" andSelectImage:@"persion"];
     
-     RootNavigationController *setup = [self tabBarWithController:[[setUpViewController alloc]init] andTitle:@"个人中心" andNormalImage:@"personIsSelecd" andSelectImage:@"persion"];
+     RootNavigationController *setup = [self tabBarWithController:[[setUpViewController alloc]init] andTitle:@"设置" andNormalImage:@"personIsSelecd" andSelectImage:@"persion"];
     
     self.viewControllers = @[homePage,persona,setup];
 }

@@ -7,6 +7,7 @@
 //
 
 #import "loginViewController.h"
+#import "RootTabBarViewController.h"
 
 @interface loginViewController ()
 
@@ -18,6 +19,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 //    Color_Base(36, 100, 123);
+}
+
+- (IBAction)forgetAction:(id)sender {
+    
+}
+
+- (IBAction)loginAction:(id)sender {
+    
 }
 
 /*
