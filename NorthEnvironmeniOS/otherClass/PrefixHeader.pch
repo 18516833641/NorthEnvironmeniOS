@@ -38,10 +38,10 @@
 #import "MJRefresh.h"
 #import "AFNetworking.h"
 #import "PostService.h"
-//#import "HomeModel.h"
-//#import "WMZDialog.h"
-//#import "RZCarPlateNoTextField.h"
-//#import "RZCarPlateNoInputAlertView.h"
+#import "homeModel.h"
+#import "baseTableViewCell.h"
+#import "UIImageView+WebCache.h"
+#import "baseViewController.h"
 
 //#import <JXCategoryView.h>
 #endif /* PrefixHeader_pch */

@@ -1,14 +1,14 @@
 //
-//  threeViewController.m
+//  zeroViewController.m
 //  NorthEnvironmeniOS
 //
-//  Created by mac on 2020/8/15.
+//  Created by mac on 2020/8/16.
 //  Copyright © 2020 jietingzhang. All rights reserved.
 //
 
-#import "threeViewController.h"
+#import "zeroViewController.h"
 
-@interface threeViewController ()
+@interface zeroViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation threeViewController
+@implementation zeroViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,7 +43,7 @@
     
     [SVProgressHUD show];
 
-    NSString *urlString = [NSString stringWithFormat:@"%@",Url_SeverZZYW];
+    NSString *urlString = [NSString stringWithFormat:@"%@",Url_SeverYYXM];
     
     NSLog(@"---%@",urlString);
 
@@ -102,20 +102,18 @@
     
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    baseViewController *detilVC = [[baseViewController alloc]init];
-    if (_dataSource.count>0) {
-          homeModel * model=_dataSource[indexPath.row];
-         detilVC.listID = model.listID;
-        detilVC.url = @"bkBusController";
-          detilVC.title = @"主营业务详情";
-          [self.navigationController pushViewController:detilVC animated:YES];
-        
-    }
-
-}
-
-
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    baseViewController *detilVC = [[baseViewController alloc]init];
+//    if (_dataSource.count>0) {
+//          homeModel * model=_dataSource[indexPath.row];
+//         detilVC.listID = model.listID;
+//        detilVC.url = @"bkHonerController";
+//          detilVC.title = @"资质荣誉详情";
+//          [self.navigationController pushViewController:detilVC animated:YES];
+//        
+//    }
+//
+//}
 
 @end

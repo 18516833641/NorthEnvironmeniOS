@@ -1,33 +1,33 @@
 //
-//  oneViewController.m
+//  baseViewController.m
 //  NorthEnvironmeniOS
 //
-//  Created by mac on 2020/8/15.
+//  Created by mac on 2020/8/16.
 //  Copyright © 2020 jietingzhang. All rights reserved.
 //
 
-#import "oneViewController.h"
+#import "baseViewController.h"
 
-@interface oneViewController ()
+@interface baseViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UITextView *textview;
 
 @end
 
-@implementation oneViewController
+@implementation baseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    [self httpService];
+      [self httpService];
 }
+
 
 -(void)httpService{
 
         [SVProgressHUD show];
 
-        NSString *urlString = [NSString stringWithFormat:@"%@",Url_SeverGSJJ];
+        NSString *urlString = [NSString stringWithFormat:@"%@%@/%@",Url_Sever,_url,_listID];
         NSLog(@"---%@",urlString);
 
              //请求数据
@@ -40,21 +40,18 @@
                    
                    
                    NSLog(@"---%@",[PostService DataTOjsonString:responseObject]);
-
-                   NSString *htmlString = responseObject[@"data"][0][@"content"] ;
+//                NSLog(@"---%@",responseObject[@"data"]);
+                   NSString *htmlString = responseObject[@"data"][@"content"] ;
+                   
 
                    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData: [htmlString dataUsingEncoding:NSUnicodeStringEncoding] options: @{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes: nil error: nil];
 
-                   self.textView.attributedText = attributedString;
+                   self.textview.attributedText = attributedString;
 
-          
-//                 NSLog(@"---------%@",responseObject);
-                   NSLog(@"---%@",[PostService DataTOjsonString:responseObject]);
  
                }
 
            }];
 }
-
 
 @end

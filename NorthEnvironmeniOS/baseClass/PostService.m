@@ -44,33 +44,13 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
                 
         }];
         
-//        [manager POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
-//
-//        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//
-//            NSDictionary * JSON = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-//
-////            NSLog(@"====%@",JSON);
-//          if (completion) completion(JSON,nil);
-//        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//
-//            if (completion) completion(nil,error);
-//        }];
-        
     }else if([method isEqualToString:@"GET"]){//GET
-        
-//        [manager.requestSerializer setValue:@"application/json"forHTTPHeaderField:@"X-AUTH-TOKEN"];
         
         
         NSUserDefaults *des = [NSUserDefaults standardUserDefaults];
              
         NSString * token=[des objectForKey:@"token"];
 
-        [manager.requestSerializer setValue:@"application/json"forHTTPHeaderField:@"Accept"];
-
-        [manager.requestSerializer setValue:@"application/json;charset=utf-8"forHTTPHeaderField:@"Content-Type"];
-
-        [manager.requestSerializer setValue:@"X-AUTH-TOKEN" forHTTPHeaderField:[NSString stringWithFormat:@"%@",token]];
         
          [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",token] forHTTPHeaderField:@"X-AUTH-TOKEN"];
 
@@ -83,14 +63,6 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
             if (completion) completion(nil,error);
         }];
         
-//        [manager GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
-//        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//             NSDictionary * JSON = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-//
-//                     if (completion) completion(JSON,nil);
-//        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//            if (completion) completion(nil,error);
-//        }];
         
     }else if([method isEqualToString:@"PUT"]){//PUT
         
@@ -106,13 +78,6 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
         
         }];
         
-//        [manager PUT:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//            NSDictionary * JSON = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-//
-//            if (completion) completion(JSON,nil);
-//        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//            if (completion) completion(nil,error);
-//        }];
         
     }else{//DELETE
         
@@ -129,13 +94,6 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
             
         }];
         
-//        [manager DELETE:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//             NSDictionary * JSON = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-//
-//                       if (completion) completion(JSON,nil);
-//        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//             if (completion) completion(nil,error);
-//        }];
         
     }
     
@@ -321,65 +279,6 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
         jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
     return jsonString;
-}
-
-
-+ (void)getHttpRequestURL:(NSString *)url RequestSuccess:(void(^)(id repoes,NSURLSessionDataTask *task)) success RequestFaile:(void(^)(NSError *error))faile{
-
-   AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-
-   manager.responseSerializer = [AFHTTPResponseSerializer serializer];//放弃解析
-
-    ///自定义http header 此处可省略
-    
-    NSUserDefaults *des = [NSUserDefaults standardUserDefaults];
-         
-    NSString * token=[des objectForKey:@"token"];
-
-    [manager.requestSerializer setValue:@"application/json"forHTTPHeaderField:@"Accept"];
-
-    [manager.requestSerializer setValue:@"application/json;charset=utf-8"forHTTPHeaderField:@"Content-Type"];
-
-    [manager.requestSerializer setValue:@"X-AUTH-TOKEN" forHTTPHeaderField:[NSString stringWithFormat:@"%@",token]];
-    
-     [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",token] forHTTPHeaderField:@"X-AUTH-TOKEN"];
-
-    [manager.requestSerializer setHTTPShouldHandleCookies:NO];
-    
-    [manager GET:url parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (success) {
-
-            //返回成功结果
-
-            success(responseObject,task);
-
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-         //返回失败结果
-
-               faile(error);
-    }];
-
-//    [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-//
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//
-//        if (success) {
-//
-//            //返回成功结果
-//
-//            success(responseObject,task);
-//
-//        }
-//
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//
-//        //返回失败结果
-//
-//        faile(error);
-//
-//    }];
-
 }
 
 

@@ -7,6 +7,7 @@
 //
 
 #import "homePageViewController.h"
+#import "zeroViewController.h"
 #import "oneViewController.h"
 #import "twoViewController.h"
 #import "threeViewController.h"
@@ -61,7 +62,11 @@
 
 
 - (IBAction)zeroAction:(id)sender {
-    NSLog(@"----");
+    
+    zeroViewController *vc= [[zeroViewController alloc]init];
+    vc.hidesBottomBarWhenPushed = YES;
+    vc.title=@"运营项目";
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)oneButAction:(id)sender {

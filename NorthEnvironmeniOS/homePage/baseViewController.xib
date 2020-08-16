@@ -8,9 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="oneViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="baseViewController">
             <connections>
-                <outlet property="textView" destination="4hI-eX-CF6" id="roo-Q6-LyS"/>
+                <outlet property="textview" destination="KdB-Ys-d0B" id="puU-1G-pVu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,31 +19,31 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_gsjj" translatesAutoresizingMaskIntoConstraints="NO" id="n7u-nd-UcX">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_gsjj" translatesAutoresizingMaskIntoConstraints="NO" id="lIz-HM-7Ol">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                 </imageView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4hI-eX-CF6">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KdB-Ys-d0B">
                     <rect key="frame" x="20" y="164" width="374" height="578"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="n7u-nd-UcX" firstAttribute="width" secondItem="Q5M-cg-NOt" secondAttribute="width" id="0MG-bw-y8x"/>
-                <constraint firstItem="n7u-nd-UcX" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="TBq-4g-rIz"/>
-                <constraint firstItem="4hI-eX-CF6" firstAttribute="centerX" secondItem="n7u-nd-UcX" secondAttribute="centerX" id="TlF-Qk-8SD"/>
-                <constraint firstItem="4hI-eX-CF6" firstAttribute="centerY" secondItem="n7u-nd-UcX" secondAttribute="centerY" id="Wcz-O5-Ic8"/>
-                <constraint firstItem="4hI-eX-CF6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="YHX-Ze-nvC"/>
-                <constraint firstItem="4hI-eX-CF6" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="120" id="enw-l3-N0m"/>
-                <constraint firstItem="n7u-nd-UcX" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="itp-rK-cXL"/>
-                <constraint firstItem="n7u-nd-UcX" firstAttribute="height" secondItem="Q5M-cg-NOt" secondAttribute="height" id="mH0-3Y-Rww"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="4hI-eX-CF6" secondAttribute="trailing" constant="20" id="slM-qU-P2O"/>
+                <constraint firstItem="KdB-Ys-d0B" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="5fm-cq-ZgT"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="KdB-Ys-d0B" secondAttribute="trailing" constant="20" id="9Gw-iz-hO1"/>
+                <constraint firstItem="lIz-HM-7Ol" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="Hda-Vv-fD9"/>
+                <constraint firstItem="lIz-HM-7Ol" firstAttribute="height" secondItem="Q5M-cg-NOt" secondAttribute="height" id="JNd-cf-r70"/>
+                <constraint firstItem="KdB-Ys-d0B" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="120" id="JSm-9D-Ira"/>
+                <constraint firstItem="KdB-Ys-d0B" firstAttribute="centerY" secondItem="lIz-HM-7Ol" secondAttribute="centerY" id="Sh7-8A-tCB"/>
+                <constraint firstItem="lIz-HM-7Ol" firstAttribute="width" secondItem="Q5M-cg-NOt" secondAttribute="width" id="Trh-da-4Qj"/>
+                <constraint firstItem="KdB-Ys-d0B" firstAttribute="centerX" secondItem="lIz-HM-7Ol" secondAttribute="centerX" id="YIc-If-GAq"/>
+                <constraint firstItem="lIz-HM-7Ol" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="vrd-tf-EYt"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="139" y="145"/>
+            <point key="canvasLocation" x="139" y="119"/>
         </view>
     </objects>
     <resources>
