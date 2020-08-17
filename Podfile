@@ -8,6 +8,8 @@ pod 'SDWebImage', '~> 5.0'
 pod 'MJRefresh','~> 3.2.0'
 pod 'SVProgressHUD','~> 2.2.5'
 pod 'IQKeyboardManager', '~> 6.4.0'
+pod 'ORCharts', '~> 2.1.8'
+pod 'JXCategoryView'
 
 use_frameworks!
 
