@@ -39,9 +39,12 @@
 #import "AFNetworking.h"
 #import "PostService.h"
 #import "homeModel.h"
+#import "baseModel.h"
 #import "baseTableViewCell.h"
 #import "UIImageView+WebCache.h"
 #import "baseViewController.h"
+
+#import "zeroTableViewCell.h"
 
 //#import <JXCategoryView.h>
 #endif /* PrefixHeader_pch */

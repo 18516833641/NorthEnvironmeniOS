@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface zeroViewController1 : AnalyticsViewController
 
+@property (nonatomic,copy)NSString            * listID;//
+
+@property (nonatomic,copy)NSString            * url;
+
 @end
 
 NS_ASSUME_NONNULL_END

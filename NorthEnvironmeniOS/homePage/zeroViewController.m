@@ -7,6 +7,11 @@
 //
 
 #import "zeroViewController.h"
+#import "zeroViewController1.h"
+#import "zeroViewController2.h"
+#import "zeroViewController3.h"
+#import "zeroViewController4.h"
+
 
 @interface zeroViewController ()
 
@@ -102,18 +107,19 @@
     
 }
 
-//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    baseViewController *detilVC = [[baseViewController alloc]init];
-//    if (_dataSource.count>0) {
-//          homeModel * model=_dataSource[indexPath.row];
-//         detilVC.listID = model.listID;
-//        detilVC.url = @"bkHonerController";
-//          detilVC.title = @"资质荣誉详情";
-//          [self.navigationController pushViewController:detilVC animated:YES];
-//        
-//    }
-//
-//}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    zeroViewController1 *detilVC = [[zeroViewController1 alloc]init];
+    if (_dataSource.count>0) {
+          homeModel * model=_dataSource[indexPath.row];
+          detilVC.listID = model.listID;
+          detilVC.url = @"bkProgramController";
+          detilVC.title = @"运营项目";
+          [self.navigationController pushViewController:detilVC animated:YES];
+        
+    }
+
+}
 
 @end

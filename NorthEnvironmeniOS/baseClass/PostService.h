@@ -15,23 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)AFHTTPSessionManager:(NSString *)url method:(NSString *) method params:(NSDictionary *)params WithBlock:(void(^)(id responseObject, NSError *error))completion;
 
-+ (void)getHttpRequestURL:(NSString *)url RequestSuccess:(void(^)(id repoes,NSURLSessionDataTask *task)) success RequestFaile:(void(^)(NSError *error))faile;
-
-/******************************************************************************
-函数名称 : + (NSData *)dataWithBase64EncodedString:(NSString *)string
-函数描述 : base64格式字符串转换为文本数据
-输入参数 : (NSString *)string
-输出参数 : N/A
-返回参数 : (NSData *)
-备注信息 :
-******************************************************************************/
-+ (NSData *)dataWithBase64EncodedString:(NSString *)string;
-
-
-//
-+(id)jwtDecodeWithJwtString:(NSString *)jwtStr;
-
 +(NSString*)DataTOjsonString:(id)object;
+
++(float)roundFloat:(float)price;
 
 @end
 

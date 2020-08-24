@@ -19,6 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy)NSString *tile;//
 
 
+
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

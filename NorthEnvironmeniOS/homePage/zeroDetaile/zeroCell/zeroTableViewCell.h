@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class homeModel;
+
 @interface zeroTableViewCell : UITableViewCell
+
+@property (nonatomic,strong)homeModel   *model;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *conterLabel;
 
 @end
 

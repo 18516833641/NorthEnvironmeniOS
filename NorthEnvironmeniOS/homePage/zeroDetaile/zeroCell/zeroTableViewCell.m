@@ -21,4 +21,22 @@
     // Configure the view for the selected state
 }
 
+//
+//-(void)setModel:(homeModel *)model{
+//    
+////    [_iamge.image s]
+////    [_iamge sd_setImageWithURL:[NSURL URLWithString:UrlStr] placeholderImage:[UIImage imageNamed:@"zwsj_t"]];
+//    
+//    
+//    
+//    NSString * imagestring=[model.thmb stringByReplacingOccurrencesOfString:@"\\"withString:@"/"];
+//                            
+////    [model.thmb stringByReplacingOccurrencesOfString:@"\\" withString:@"/"];
+//    NSLog(@"%@",imagestring);
+//                            
+////    [_iamge sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",Url_SeverImage,imagestring]]];
+//    _title.text = [NSString stringWithFormat:@"%@",model.tile];
+//    
+//}
+
 @end

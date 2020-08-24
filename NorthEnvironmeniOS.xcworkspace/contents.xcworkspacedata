@@ -4,6 +4,13 @@
    <FileRef
       location = "group:NorthEnvironmeniOS.xcodeproj">
    </FileRef>
+   <Group
+      location = "group:NorthEnvironmeniOS/supportfile"
+      name = "supportfile">
+      <FileRef
+         location = "group:DesignableView.swift">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>

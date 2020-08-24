@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface fourTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *headImage;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *rightLabel;
+
 @end
 
 NS_ASSUME_NONNULL_END

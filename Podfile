@@ -10,6 +10,8 @@ pod 'SVProgressHUD','~> 2.2.5'
 pod 'IQKeyboardManager', '~> 6.4.0'
 pod 'ORCharts', '~> 2.1.8'
 pod 'JXCategoryView'
+pod 'Charts'
+pod 'ChartsRealm'
 
 use_frameworks!
 
