@@ -38,7 +38,7 @@
 
         [SVProgressHUD show];
 
-        NSString *urlString = [NSString stringWithFormat:@"%@",Url_SeverGZXX];
+        NSString *urlString = [NSString stringWithFormat:@"%@",Url_SeverHQQX];
         NSLog(@"---%@",urlString);
 
              //请求数据
@@ -50,7 +50,7 @@
                }else{
                    
                    
-                   NSLog(@"---%@",[PostService DataTOjsonString:responseObject]);
+                   NSLog(@"-------%@",[PostService DataTOjsonString:responseObject]);
 
 //                   NSString *htmlString = responseObject[@"data"][0][@"content"] ;
 
